@@ -1,0 +1,69 @@
+Name: Naga Sri Rama Yashwanth Thota
+UTA ID: 1001507395
+Language: JAVA
+==============================================================================================
+References:
+http://cs.lmu.edu/~ray/notes/javanetexamples/
+https://www.shubhsblog.com/programming/multithreaded-webserver-java.html
+http://javabeginnerstutorial.com/code-base/split-a-string-using-scannner-class-in-java/
+https://stackoverflow.com/questions/20728050/split-strings-in-java-by-words
+https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file
+https://www.youtube.com/watch?v=kqBmsLvWU14
+ 
+==============================================================================================
+Contents of ZIP File:
+1. Multi.java
+2. Client1.java
+3. Textfile.txt
+4. writeup.txt
+==============================================================================================
+How Code is Structured:
+
+Server:
+A simple Swing-based Server which contains a frame with a text area
+to display the message from client
+
+Server is Multithreaded and can handle multiple clients simultaneously.
+New thread is created for each Client.It now listens on 1205 port.
+ 
+Server receives message for client and checks each word in the message
+with the lexicon file(Textfile.txt).
+
+if there there is an mismatch in the spelling or if the word is not 
+present in the lexicon file.The server replaces that word with "<error>"
+and sends it to the client.
+ 
+if not it returns the same word to the client. 
+
+-----------------------------------------------------------------------------------------------
+Client:
+A simple Swing-based client with a frame with a text field for entering messages and a
+textarea to see the whole dialog.
+
+The client follows the Protocol which is as follows.
+When the client enter the message in the text box and press send button.
+the message is sent to the server.
+
+when there is a reply from server. The client displays the reply on the text area
+present in the GUI.
+
+============================================================================================
+How to Run the code:
+Multi.java- This is the program for server.
+Client1.java- This is the program for client
+
+procedure:-
+In the commmand line prompt enter:
+
+javac Multi.java 
+javac Client1.java
+
+and then enter:
+
+java Server
+java Client
+
+============================================================================================
+NOTE:
+Server is implemented using MultiThreading.
+Consider this code for Extra Credit.
