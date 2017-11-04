@@ -1,0 +1,902 @@
+mysql> desc useraccount;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| Idno     | int(11)      | NO   | PRI | NULL    |       |
+| fname    | char(1)      | NO   |     | NULL    |       |
+| lname    | varchar(255) | NO   |     | NULL    |       |
+| phone    | char(12)     | YES  |     | NULL    |       |
+| userid   | varchar(30)  | YES  |     | NULL    |       |
+| password | varchar(8)   | YES  |     | NULL    |       |
+| rolename | varchar(255) | YES  | MUL | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+7 rows in set (0.08 sec)
+
+mysql> insert into useraccount values(1,"T","YASHWANTH","682-252-1300","YASHWANTH019","YASHWI","ROLE1");
+Query OK, 1 row affected (0.13 sec)
+
+mysql> insert into useraccount values(2,"S","ROSHAN","682-212-1300","ROSHAN019","ROSHII","ROLE2");
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into useraccount values(3,"Q","JACK","692-212-1300","JACK9","JACKIE","ROLE3");
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into useraccount values(4,"R","KAMAL","692-212-1301","KAMAL3","KAM","ROLE4");
+Query OK, 1 row affected (0.13 sec)
+
+mysql> insert into useraccount values(5,"H","SUMO","692-252-1301","SUMO6","SUM","ROLE5");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(6,"L","ACCENT","692-252-1401","ACCENT","ACC83","ROLE1");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into useraccount values(7,"Z","CHEVI","792-252-1401","CHEVI34","CAJA23","ROLE2");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into useraccount values(8,"O","PANEER","792-252-0401","PANEER45","1AMMA1","ROLE3");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into useraccount values(9,"F","YOUKI","792-256-0401","YOU45","KIMA1","ROLE4");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into useraccount values(10,"J","HARDY","700-256-0401","HARD69","RDI1","ROLE5");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into useraccount values(11,"H","KATRE","701-256-0401","KAT99","JATTEW","ROLE1");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(12,"L","LAVA","701-246-0401","LAVA","KUMAR","ROLE2");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(13,"N","KUMAR","711-246-0401","KUMAR","LAVA","ROLE3");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into useraccount values(14,"R","JAI","711-209-0401","JAI12","JAIYA","ROLE4");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into useraccount values(15,"G","MATRE","711-209-1111","MATRE45","BOMBAY","ROLE5");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into useraccount values(16,"H","ASSAM","711-209-1101","ASSAM","ANTHA","ROLE1");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(17,"T","MAMA","711-219-1101","MAMA64","AMSAM","ROLE2");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(18,"K","KEITH","711-219-2101","KEITH32","KETI","ROLE3");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into useraccount values(19,"G","RAMA","711-219-2801","RAMA007","BONF0","ROLE4");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into useraccount values(20,"F","BUSS","711-119-2801","BUSS001","BOMB2","ROLE5");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> notee;
+mysql> select * from useraccount;
++------+-------+-----------+--------------+--------------+----------+----------+
+| Idno | fname | lname     | phone        | userid       | password | rolename |
++------+-------+-----------+--------------+--------------+----------+----------+
+|    1 | T     | YASHWANTH | 682-252-1300 | YASHWANTH019 | YASHWI   | ROLE1    |
+|    2 | S     | ROSHAN    | 682-212-1300 | ROSHAN019    | ROSHII   | ROLE2    |
+|    3 | Q     | JACK      | 692-212-1300 | JACK9        | JACKIE   | ROLE3    |
+|    4 | R     | KAMAL     | 692-212-1301 | KAMAL3       | KAM      | ROLE4    |
+|    5 | H     | SUMO      | 692-252-1301 | SUMO6        | SUM      | ROLE5    |
+|    6 | L     | ACCENT    | 692-252-1401 | ACCENT       | ACC83    | ROLE1    |
+|    7 | Z     | CHEVI     | 792-252-1401 | CHEVI34      | CAJA23   | ROLE2    |
+|    8 | O     | PANEER    | 792-252-0401 | PANEER45     | 1AMMA1   | ROLE3    |
+|    9 | F     | YOUKI     | 792-256-0401 | YOU45        | KIMA1    | ROLE4    |
+|   10 | J     | HARDY     | 700-256-0401 | HARD69       | RDI1     | ROLE5    |
+|   11 | H     | KATRE     | 701-256-0401 | KAT99        | JATTEW   | ROLE1    |
+|   12 | L     | LAVA      | 701-246-0401 | LAVA         | KUMAR    | ROLE2    |
+|   13 | N     | KUMAR     | 711-246-0401 | KUMAR        | LAVA     | ROLE3    |
+|   14 | R     | JAI       | 711-209-0401 | JAI12        | JAIYA    | ROLE4    |
+|   15 | G     | MATRE     | 711-209-1111 | MATRE45      | BOMBAY   | ROLE5    |
+|   16 | H     | ASSAM     | 711-209-1101 | ASSAM        | ANTHA    | ROLE1    |
+|   17 | T     | MAMA      | 711-219-1101 | MAMA64       | AMSAM    | ROLE2    |
+|   18 | K     | KEITH     | 711-219-2101 | KEITH32      | KETI     | ROLE3    |
+|   19 | G     | RAMA      | 711-219-2801 | RAMA007      | BONF0    | ROLE4    |
+|   20 | F     | BUSS      | 711-119-2801 | BUSS001      | BOMB2    | ROLE5    |
++------+-------+-----------+--------------+--------------+----------+----------+
+20 rows in set (0.00 sec)
+
+mysql> desc tables;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| ownerid   | int(11)      | YES  | MUL | NULL    |       |
+| tablename | varchar(255) | NO   | PRI | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into tables values(1,"table1");
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into tables values(2,"table2");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into tables values(3,"table4");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into tables values(4,"table3");
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into tables values(5,"table5");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into tables values(6,"table6");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into tables values(7,"table7");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into tables values(8,"table8");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into tables values(9,"table9");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into tables values(10,"table10");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from tables;
++---------+-----------+
+| ownerid | tablename |
++---------+-----------+
+|       1 | table1    |
+|       2 | table2    |
+|       3 | table4    |
+|       4 | table3    |
+|       5 | table5    |
+|       6 | table6    |
+|       7 | table7    |
+|       8 | table8    |
+|       9 | table9    |
+|      10 | table10   |
++---------+-----------+
+10 rows in set (0.00 sec)
+
+
+mysql> desc userrole;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| rolename    | varchar(255) | NO   | PRI | NULL    |       |
+| description | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into userrole values("role1","this is role1");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into userrole values("role2","this is role2");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into userrole values("role3","this is role3");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into userrole values("role4","this is role4");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into userrole values("role5","this is role5");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from userrole;
++----------+---------------+
+| rolename | description   |
++----------+---------------+
+| role1    | this is role1 |
+| role2    | this is role2 |
+| role3    | this is role3 |
+| role4    | this is role4 |
+| role5    | this is role5 |
++----------+---------------+
+5 rows in set (0.00 sec)
+
+
+
+mysql> desc session;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| Idno        | int(11)      | NO   | PRI | NULL    |       |
+| tablename   | varchar(255) | NO   | PRI | NULL    |       |
+| sessionID   | char(100)    | NO   | PRI | NULL    |       |
+| changesmade | varchar(255) | YES  |     | NULL    |       |
+| sessiontime | int(11)      | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into session values(1,"table6","1r2","modified column table6","25");
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into session values(3,"table9","1ses3","updated values table9","64");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into session values(2,"table5","1ses4","updated values table5","90");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from session;
++------+-----------+-----------+------------------------+-------------+
+| Idno | tablename | sessionID | changesmade            | sessiontime |
++------+-----------+-----------+------------------------+-------------+
+|    1 | table6    | 1r2       | modified column table6 |          25 |
+|    2 | table5    | 1ses4     | updated values table5  |          90 |
+|    3 | table9    | 1ses3     | updated values table9  |          64 |
++------+-----------+-----------+------------------------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> desc privileges;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| pid       | int(11)      | NO   | PRI | NULL    |       |
+| priv_name | varchar(255) | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into privileges values(1,"account privilege");
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into privileges values(2,"relation privilege");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from privileges;
++-----+--------------------+
+| pid | priv_name          |
++-----+--------------------+
+|   1 | account privilege  |
+|   2 | relation privilege |
++-----+--------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc accountprivileges;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| aid             | int(11)      | YES  | MUL | NULL    |       |
+| rolename        | varchar(255) | NO   | PRI | NULL    |       |
+| a_privilegetype | varchar(255) | NO   | PRI | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into accountprivileges values(1,"role1","select");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into accountprivileges values(1,"role2","delete");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into accountprivileges values(1,"role3","update");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into accountprivileges values(1,"role4","truncate");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into accountprivileges values(1,"role5","createtab");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into accountprivileges values(1,"role1","update");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from accountprivileges;
++------+----------+-----------------+
+| aid  | rolename | a_privilegetype |
++------+----------+-----------------+
+|    1 | role1    | select          |
+|    1 | role1    | update          |
+|    1 | role2    | delete          |
+|    1 | role3    | update          |
+|    1 | role4    | truncate        |
+|    1 | role5    | createtab       |
++------+----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> notee;
+mysql> insert into relationprivileges values(2,"role1","delete","table9");
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into relationprivileges values(2,"role2","select","table10");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into relationprivileges values(2,"role3","delete","table1");
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into relationprivileges values(2,"role4","update","table5");
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into relationprivileges values(2,"role5","revoke","table5");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from relationprivileges;
++------+----------+-----------------+-----------+
+| rid  | rolename | r_privilegetype | tablename |
++------+----------+-----------------+-----------+
+|    2 | role1    | delete          | table9    |
+|    2 | role2    | select          | table10   |
+|    2 | role3    | delete          | table1    |
+|    2 | role4    | update          | table5    |
+|    2 | role5    | revoke          | table5    |
++------+----------+-----------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> SET foreign_key_checks = 1;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from useraccount;
++------+-------+-----------+--------------+--------------+----------+----------+
+| Idno | fname | lname     | phone        | userid       | password | rolename |
++------+-------+-----------+--------------+--------------+----------+----------+
+|    1 | T     | YASHWANTH | 682-252-1300 | YASHWANTH019 | YASHWI   | ROLE1    |
+|    2 | S     | ROSHAN    | 682-212-1300 | ROSHAN019    | ROSHII   | ROLE2    |
+|    3 | Q     | JACK      | 692-212-1300 | JACK9        | JACKIE   | ROLE3    |
+|    4 | R     | KAMAL     | 692-212-1301 | KAMAL3       | KAM      | ROLE4    |
+|    5 | H     | SUMO      | 692-252-1301 | SUMO6        | SUM      | ROLE5    |
+|    6 | L     | ACCENT    | 692-252-1401 | ACCENT       | ACC83    | ROLE1    |
+|    7 | Z     | CHEVI     | 792-252-1401 | CHEVI34      | CAJA23   | ROLE2    |
+|    8 | O     | PANEER    | 792-252-0401 | PANEER45     | 1AMMA1   | ROLE3    |
+|    9 | F     | YOUKI     | 792-256-0401 | YOU45        | KIMA1    | ROLE4    |
+|   10 | J     | HARDY     | 700-256-0401 | HARD69       | RDI1     | ROLE5    |
+|   11 | H     | KATRE     | 701-256-0401 | KAT99        | JATTEW   | ROLE1    |
+|   12 | L     | LAVA      | 701-246-0401 | LAVA         | KUMAR    | ROLE2    |
+|   13 | N     | KUMAR     | 711-246-0401 | KUMAR        | LAVA     | ROLE3    |
+|   14 | R     | JAI       | 711-209-0401 | JAI12        | JAIYA    | ROLE4    |
+|   15 | G     | MATRE     | 711-209-1111 | MATRE45      | BOMBAY   | ROLE5    |
+|   16 | H     | ASSAM     | 711-209-1101 | ASSAM        | ANTHA    | ROLE1    |
+|   17 | T     | MAMA      | 711-219-1101 | MAMA64       | AMSAM    | ROLE2    |
+|   18 | K     | KEITH     | 711-219-2101 | KEITH32      | KETI     | ROLE3    |
+|   19 | G     | RAMA      | 711-219-2801 | RAMA007      | BONF0    | ROLE4    |
+|   20 | F     | BUSS      | 711-119-2801 | BUSS001      | BOMB2    | ROLE5    |
+|   21 | J     | ravi      | 872-902-1300 | ravi         | teja     | role3    |
++------+-------+-----------+--------------+--------------+----------+----------+
+21 rows in set (0.00 sec)
+
+mysql> delete from useraccount where idno=21;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from useraccount;
++------+-------+-----------+--------------+--------------+----------+----------+
+| Idno | fname | lname     | phone        | userid       | password | rolename |
++------+-------+-----------+--------------+--------------+----------+----------+
+|    1 | T     | YASHWANTH | 682-252-1300 | YASHWANTH019 | YASHWI   | ROLE1    |
+|    2 | S     | ROSHAN    | 682-212-1300 | ROSHAN019    | ROSHII   | ROLE2    |
+|    3 | Q     | JACK      | 692-212-1300 | JACK9        | JACKIE   | ROLE3    |
+|    4 | R     | KAMAL     | 692-212-1301 | KAMAL3       | KAM      | ROLE4    |
+|    5 | H     | SUMO      | 692-252-1301 | SUMO6        | SUM      | ROLE5    |
+|    6 | L     | ACCENT    | 692-252-1401 | ACCENT       | ACC83    | ROLE1    |
+|    7 | Z     | CHEVI     | 792-252-1401 | CHEVI34      | CAJA23   | ROLE2    |
+|    8 | O     | PANEER    | 792-252-0401 | PANEER45     | 1AMMA1   | ROLE3    |
+|    9 | F     | YOUKI     | 792-256-0401 | YOU45        | KIMA1    | ROLE4    |
+|   10 | J     | HARDY     | 700-256-0401 | HARD69       | RDI1     | ROLE5    |
+|   11 | H     | KATRE     | 701-256-0401 | KAT99        | JATTEW   | ROLE1    |
+|   12 | L     | LAVA      | 701-246-0401 | LAVA         | KUMAR    | ROLE2    |
+|   13 | N     | KUMAR     | 711-246-0401 | KUMAR        | LAVA     | ROLE3    |
+|   14 | R     | JAI       | 711-209-0401 | JAI12        | JAIYA    | ROLE4    |
+|   15 | G     | MATRE     | 711-209-1111 | MATRE45      | BOMBAY   | ROLE5    |
+|   16 | H     | ASSAM     | 711-209-1101 | ASSAM        | ANTHA    | ROLE1    |
+|   17 | T     | MAMA      | 711-219-1101 | MAMA64       | AMSAM    | ROLE2    |
+|   18 | K     | KEITH     | 711-219-2101 | KEITH32      | KETI     | ROLE3    |
+|   19 | G     | RAMA      | 711-219-2801 | RAMA007      | BONF0    | ROLE4    |
+|   20 | F     | BUSS      | 711-119-2801 | BUSS001      | BOMB2    | ROLE5    |
++------+-------+-----------+--------------+--------------+----------+----------+
+20 rows in set (0.00 sec)
+
+mysql> select * from userrole;
++----------+----------------+
+| rolename | description    |
++----------+----------------+
+| role1    | this is role1  |
+| role2    | this is role2  |
+| role3    | this is role3  |
+| role4    | this is role4  |
+| role5    | this is role5  |
+| role6    | this is role 6 |
++----------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> delete from userrole where rolename="role6";
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from tables;
++---------+-----------+
+| ownerid | tablename |
++---------+-----------+
+|       1 | table1    |
+|       2 | table2    |
+|       3 | table4    |
+|       4 | table3    |
+|       5 | table5    |
+|       6 | table6    |
+|       7 | table7    |
+|       8 | table8    |
+|       9 | table9    |
+|      10 | table10   |
+|      20 | table11   |
++---------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> delete from tables where ownerid= 20;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from useraccount;
++------+-------+-----------+--------------+--------------+----------+----------+
+| Idno | fname | lname     | phone        | userid       | password | rolename |
++------+-------+-----------+--------------+--------------+----------+----------+
+|    1 | T     | YASHWANTH | 682-252-1300 | YASHWANTH019 | YASHWI   | role4    |
+|    2 | S     | ROSHAN    | 682-212-1300 | ROSHAN019    | ROSHII   | ROLE2    |
+|    3 | Q     | JACK      | 692-212-1300 | JACK9        | JACKIE   | ROLE3    |
+|    4 | R     | KAMAL     | 692-212-1301 | KAMAL3       | KAM      | ROLE4    |
+|    5 | H     | SUMO      | 692-252-1301 | SUMO6        | SUM      | ROLE5    |
+|    6 | L     | ACCENT    | 692-252-1401 | ACCENT       | ACC83    | ROLE1    |
+|    7 | Z     | CHEVI     | 792-252-1401 | CHEVI34      | CAJA23   | ROLE2    |
+|    8 | O     | PANEER    | 792-252-0401 | PANEER45     | 1AMMA1   | ROLE3    |
+|    9 | F     | YOUKI     | 792-256-0401 | YOU45        | KIMA1    | ROLE4    |
+|   10 | J     | HARDY     | 700-256-0401 | HARD69       | RDI1     | ROLE5    |
+|   11 | H     | KATRE     | 701-256-0401 | KAT99        | JATTEW   | ROLE1    |
+|   12 | L     | LAVA      | 701-246-0401 | LAVA         | KUMAR    | ROLE2    |
+|   13 | N     | KUMAR     | 711-246-0401 | KUMAR        | LAVA     | ROLE3    |
+|   14 | R     | JAI       | 711-209-0401 | JAI12        | JAIYA    | ROLE4    |
+|   15 | G     | MATRE     | 711-209-1111 | MATRE45      | BOMBAY   | ROLE5    |
+|   16 | H     | ASSAM     | 711-209-1101 | ASSAM        | ANTHA    | ROLE1    |
+|   17 | T     | MAMA      | 711-219-1101 | MAMA64       | AMSAM    | ROLE2    |
+|   18 | K     | KEITH     | 711-219-2101 | KEITH32      | KETI     | ROLE3    |
+|   19 | G     | RAMA      | 711-219-2801 | RAMA007      | BONF0    | ROLE4    |
+|   20 | F     | BUSS      | 711-119-2801 | BUSS001      | BOMB2    | ROLE5    |
++------+-------+-----------+--------------+--------------+----------+----------+
+20 rows in set (0.00 sec)
+
+mysql> UPDATE useraccount SET rolename =role1 where idno= 1;
+ERROR 1054 (42S22): Unknown column 'role1' in 'field list'
+mysql> UPDATE useraccount SET rolename = role1 where idno= 1;
+ERROR 1054 (42S22): Unknown column 'role1' in 'field list'
+mysql> UPDATE useraccount SET rolename = "role1" where idno= 1;
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from useraccount;
++------+-------+-----------+--------------+--------------+----------+----------+
+| Idno | fname | lname     | phone        | userid       | password | rolename |
++------+-------+-----------+--------------+--------------+----------+----------+
+|    1 | T     | YASHWANTH | 682-252-1300 | YASHWANTH019 | YASHWI   | role1    |
+|    2 | S     | ROSHAN    | 682-212-1300 | ROSHAN019    | ROSHII   | ROLE2    |
+|    3 | Q     | JACK      | 692-212-1300 | JACK9        | JACKIE   | ROLE3    |
+|    4 | R     | KAMAL     | 692-212-1301 | KAMAL3       | KAM      | ROLE4    |
+|    5 | H     | SUMO      | 692-252-1301 | SUMO6        | SUM      | ROLE5    |
+|    6 | L     | ACCENT    | 692-252-1401 | ACCENT       | ACC83    | ROLE1    |
+|    7 | Z     | CHEVI     | 792-252-1401 | CHEVI34      | CAJA23   | ROLE2    |
+|    8 | O     | PANEER    | 792-252-0401 | PANEER45     | 1AMMA1   | ROLE3    |
+|    9 | F     | YOUKI     | 792-256-0401 | YOU45        | KIMA1    | ROLE4    |
+|   10 | J     | HARDY     | 700-256-0401 | HARD69       | RDI1     | ROLE5    |
+|   11 | H     | KATRE     | 701-256-0401 | KAT99        | JATTEW   | ROLE1    |
+|   12 | L     | LAVA      | 701-246-0401 | LAVA         | KUMAR    | ROLE2    |
+|   13 | N     | KUMAR     | 711-246-0401 | KUMAR        | LAVA     | ROLE3    |
+|   14 | R     | JAI       | 711-209-0401 | JAI12        | JAIYA    | ROLE4    |
+|   15 | G     | MATRE     | 711-209-1111 | MATRE45      | BOMBAY   | ROLE5    |
+|   16 | H     | ASSAM     | 711-209-1101 | ASSAM        | ANTHA    | ROLE1    |
+|   17 | T     | MAMA      | 711-219-1101 | MAMA64       | AMSAM    | ROLE2    |
+|   18 | K     | KEITH     | 711-219-2101 | KEITH32      | KETI     | ROLE3    |
+|   19 | G     | RAMA      | 711-219-2801 | RAMA007      | BONF0    | ROLE4    |
+|   20 | F     | BUSS      | 711-119-2801 | BUSS001      | BOMB2    | ROLE5    |
++------+-------+-----------+--------------+--------------+----------+----------+
+20 rows in set (0.00 sec)
+
+mysql> desc accountprivileges;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| aid             | int(11)      | YES  | MUL | NULL    |       |
+| rolename        | varchar(255) | NO   | PRI | NULL    |       |
+| a_privilegetype | varchar(255) | NO   | PRI | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from accountprivileges;
++------+----------+-----------------+
+| aid  | rolename | a_privilegetype |
++------+----------+-----------------+
+|    1 | role1    | select          |
+|    1 | role1    | update          |
+|    1 | role2    | delete          |
+|    1 | role3    | update          |
+|    1 | role4    | truncate        |
+|    1 | role5    | createtab       |
++------+----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from accountprivileges;
++------+----------+-----------------+
+| aid  | rolename | a_privilegetype |
++------+----------+-----------------+
+|    1 | role1    | select          |
+|    1 | role1    | update          |
+|    1 | role2    | delete          |
+|    1 | role3    | update          |
+|    1 | role4    | truncate        |
+|    1 | role5    | all             |
+|    1 | role5    | createtab       |
++------+----------+-----------------+
+7 rows in set (0.00 sec)
+
+mysql> delete from table where a_privilegetype="all";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table where a_privilegetype="all"' at line 1
+mysql> delete from accountprivileges where a_privilegetype="all";
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from accountprivileges;
++------+----------+-----------------+
+| aid  | rolename | a_privilegetype |
++------+----------+-----------------+
+|    1 | role1    | select          |
+|    1 | role1    | update          |
+|    1 | role2    | delete          |
+|    1 | role3    | update          |
+|    1 | role4    | truncate        |
+|    1 | role5    | createtab       |
++------+----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc relation_privileges;
+ERROR 1146 (42S02): Table 'final.relation_privileges' doesn't exist
+mysql> desc relationprivileges;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| rid             | int(11)      | YES  | MUL | NULL    |       |
+| rolename        | varchar(255) | NO   | PRI | NULL    |       |
+| r_privilegetype | varchar(255) | NO   | PRI | NULL    |       |
+| tablename       | varchar(255) | NO   | PRI | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from relationprivileges;
++------+----------+-----------------+-----------+
+| rid  | rolename | r_privilegetype | tablename |
++------+----------+-----------------+-----------+
+|    2 | role1    | delete          | table9    |
+|    2 | role2    | select          | table10   |
+|    2 | role3    | delete          | table1    |
+|    2 | role4    | update          | table5    |
+|    2 | role5    | all             | table4    |
+|    2 | role5    | revoke          | table5    |
++------+----------+-----------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> delete from relationprivileges where r_privilegetype="all";
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from relationprivileges;
++------+----------+-----------------+-----------+
+| rid  | rolename | r_privilegetype | tablename |
++------+----------+-----------------+-----------+
+|    2 | role1    | delete          | table9    |
+|    2 | role2    | select          | table10   |
+|    2 | role3    | delete          | table1    |
+|    2 | role4    | update          | table5    |
+|    2 | role5    | revoke          | table5    |
++------+----------+-----------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from (select u.rolename,a.privtype as privitype,"null" as tablename,"accountprivilege" as privilegename from userrole as u left outer join acpriv as a on u.rolename=a.rolename union select u.rolename,r.privtype as privitype,r.tablename as tablename,"relationprivilege" as privilegename from userrole as u right outer join relpriv as r on u.rolename=r.rolename) as g where g.rolename="role1";
+ERROR 1146 (42S02): Table 'final.acpriv' doesn't exist
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bal                |
+| buskatre           |
+| company            |
+| final              |
+| mysql              |
+| performance_schema |
+| test               |
+| test2              |
+| world              |
++--------------------+
+10 rows in set (0.05 sec)
+
+mysql> use test;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_test |
++----------------+
+| acpriv         |
+| relpriv        |
+| session        |
+| tables         |
+| useraccount    |
+| userrole       |
++----------------+
+6 rows in set (0.08 sec)
+
+mysql> select * from (select u.rolename,a.privtype as privitype,"null" as tablename,"accountprivilege" as privilegename from userrole as u left outer join acpriv as a on u.rolename=a.rolename union select u.rolename,r.privtype as privitype,r.tablename as tablename,"relationprivilege" as privilegename from userrole as u right outer join relpriv as r on u.rolename=r.rolename) as g where g.rolename="role1";
++----------+-----------+-----------+-------------------+
+| rolename | privitype | tablename | privilegename     |
++----------+-----------+-----------+-------------------+
+| role1    | update    | null      | accountprivilege  |
+| role1    | delete    | table9    | relationprivilege |
+| role1    | insert    | table1    | relationprivilege |
+| role1    | select    | null      | accountprivilege  |
+| role1    | bash      | table10   | relationprivilege |
++----------+-----------+-----------+-------------------+
+5 rows in set (0.18 sec)
+
+mysql> select * from (select u.rolename,a.privtype as privitype,"null" as tablename,"accountprivilege" as privilegename from userrole as u left outer join acpriv as a on u.rolename=a.rolename union select u.rolename,r.privtype as privitype,r.tablename as tablename,"relationprivilege" as privilegename from userrole as u right outer join relpriv as r on u.rolename=r.rolename) as g where g.rolename="role1"
+    -> ;
++----------+-----------+-----------+-------------------+
+| rolename | privitype | tablename | privilegename     |
++----------+-----------+-----------+-------------------+
+| role1    | update    | null      | accountprivilege  |
+| role1    | delete    | table9    | relationprivilege |
+| role1    | insert    | table1    | relationprivilege |
+| role1    | select    | null      | accountprivilege  |
+| role1    | bash      | table10   | relationprivilege |
++----------+-----------+-----------+-------------------+
+5 rows in set (0.00 sec)
+
+mysql> use final;
+Database changed
+mysql> select a.rolename, a.a_privilegetype,p.priv_name from accountprivileges as a, privileges as p where a.aid=p.pid; 
++----------+-----------------+-------------------+
+| rolename | a_privilegetype | priv_name         |
++----------+-----------------+-------------------+
+| role1    | select          | account privilege |
+| role1    | update          | account privilege |
+| role2    | delete          | account privilege |
+| role3    | update          | account privilege |
+| role4    | truncate        | account privilege |
+| role5    | createtab       | account privilege |
++----------+-----------------+-------------------+
+6 rows in set (0.06 sec)
+
+mysql> select a.rolename, a.a_privilegetype,"null" as tablename p.priv_name from accountprivileges as a, privileges as p where a.aid=p.pid; 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p.priv_name from accountprivileges as a, privileges as p where a.aid=p.pid' at line 1
+mysql> select a.rolename, a.a_privilegetype,"null" as tablename,p.priv_name from accountprivileges as a, privileges as p where a.aid=p.pid; 
++----------+-----------------+-----------+-------------------+
+| rolename | a_privilegetype | tablename | priv_name         |
++----------+-----------------+-----------+-------------------+
+| role1    | select          | null      | account privilege |
+| role1    | update          | null      | account privilege |
+| role2    | delete          | null      | account privilege |
+| role3    | update          | null      | account privilege |
+| role4    | truncate        | null      | account privilege |
+| role5    | createtab       | null      | account privilege |
++----------+-----------------+-----------+-------------------+
+6 rows in set (0.00 sec)
+
+mysql> select r.rolename, r.r_privilegetype,r.tablename as tablename,p.priv_name from accountprivileges as a, privileges as p where a.rid=p.pid; 
+ERROR 1054 (42S22): Unknown column 'r.rolename' in 'field list'
+mysql> select r.rolename, r.r_privilegetype,r.tablename as tablename,p.priv_name from relationprivileges as r, privileges as p where a.rid=p.pid; 
+ERROR 1054 (42S22): Unknown column 'a.rid' in 'where clause'
+mysql> select r.rolename, r.r_privilegetype,r.tablename as tablename,p.priv_name from relationprivileges as r, privileges as p where r.rid=p.pid; 
++----------+-----------------+-----------+--------------------+
+| rolename | r_privilegetype | tablename | priv_name          |
++----------+-----------------+-----------+--------------------+
+| role1    | delete          | table9    | relation privilege |
+| role2    | select          | table10   | relation privilege |
+| role3    | delete          | table1    | relation privilege |
+| role4    | update          | table5    | relation privilege |
+| role5    | revoke          | table5    | relation privilege |
++----------+-----------------+-----------+--------------------+
+5 rows in set (0.00 sec)
+
+mysql> ^C
+mysql> select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid;
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
+| role2    | delete        | null      | account privilege  |
+| role3    | update        | null      | account privilege  |
+| role4    | truncate      | null      | account privilege  |
+| role5    | createtab     | null      | account privilege  |
+| role1    | delete        | table9    | relation privilege |
+| role2    | select        | table10   | relation privilege |
+| role3    | delete        | table1    | relation privilege |
+| role4    | update        | table5    | relation privilege |
+| role5    | revoke        | table5    | relation privilege |
++----------+---------------+-----------+--------------------+
+11 rows in set (0.00 sec)
+
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) where rolename="role1";
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r where r.rolename="role1";
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | delete        | table9    | relation privilege |
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
++----------+---------------+-----------+--------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r where r.rolename="role1";
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | delete        | table9    | relation privilege |
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
++----------+---------------+-----------+--------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r where r.rolename="role1";
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
+| role1    | delete        | table9    | relation privilege |
++----------+---------------+-----------+--------------------+
+3 rows in set (0.02 sec)
+
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid));
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid)as r);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as z);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r ;
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
+| role2    | delete        | null      | account privilege  |
+| role3    | update        | null      | account privilege  |
+| role4    | truncate      | null      | account privilege  |
+| role5    | createtab     | null      | account privilege  |
+| role1    | delete        | table9    | relation privilege |
+| role2    | select        | table10   | relation privilege |
+| role3    | delete        | table1    | relation privilege |
+| role4    | update        | table5    | relation privilege |
+| role5    | revoke        | table5    | relation privilege |
++----------+---------------+-----------+--------------------+
+11 rows in set (0.00 sec)
+
+mysql> select x.idno as idno,x.fname as fname,x.lname,rolename,privileegetype,tablename,privilegename as lname from (select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r,useracount as x where x.rolename=r.rolename and x.idno=1 ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select x.idno as idno,x.fname as fname,x.lname,rolename,privileegetype,tablename,privilegename as lname from (select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r,useracount as x where x.rolename=r.rolename and x.idno=1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select x.idno as idno,x.fname as fname,x.lname,rolename,privileegetype,tablename,privilegename as lname from (select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r,useracount as x where x.rolename=r.rolename and x.idno=1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select x.idno as idno,x.fname as fname,x.lname,rolename,privileegetype,tablename,privilegename as lname from (select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r,useracount as x where x.rolename=r.rolename and x.idno="1";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select x.idno as idno,x.fname as fname,x.lname,rolename,privileegetype,tablename,privilegename as lname from (select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rd=t.pid) as r,useracount as x where x.rolename=r.rolename and x.idno="1";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select  i.name, r.a_privilegetype from useraccount as i join userrole as a on i.rolename=a.rolename join accountprivilege as r on a.rolename=r.rolename where i.name= "yashwanth" and r.privilegetype="select";
+ERROR 1146 (42S02): Table 'final.accountprivilege' doesn't exist
+mysql> select  i.name, r.a_privilegetype from useraccount as i join userrole as a on i.rolename=a.rolename join accountprivileges as r on a.rolename=r.rolename where i.name= "yashwanth" and r.privilegetype="select";
+ERROR 1054 (42S22): Unknown column 'i.name' in 'field list'
+mysql> select  i.lname, r.a_privilegetype from useraccount as i join userrole as a on i.rolename=a.rolename join accountprivileges as r on a.rolename=r.rolename where i.name= "yashwanth" and r.privilegetype="select";
+ERROR 1054 (42S22): Unknown column 'i.name' in 'where clause'
+mysql> select  i.lname, r.a_privilegetype from useraccount as i join userrole as a on i.rolename=a.rolename join accountprivileges as r on a.rolename=r.rolename where i.lname= "yashwanth" and r.privilegetype="select";
+ERROR 1054 (42S22): Unknown column 'r.privilegetype' in 'where clause'
+mysql> select  i.lname, r.a_privilegetype from useraccount as i join userrole as a on i.rolename=a.rolename join accountprivileges as r on a.rolename=r.rolename where i.lname= "yashwanth" and r.a_privilegetype="select";
++-----------+-----------------+
+| lname     | a_privilegetype |
++-----------+-----------------+
+| YASHWANTH | select          |
++-----------+-----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r ;
++----------+---------------+-----------+--------------------+
+| rolename | privilegetype | tablename | privilegename      |
++----------+---------------+-----------+--------------------+
+| role1    | select        | null      | account privilege  |
+| role1    | update        | null      | account privilege  |
+| role2    | delete        | null      | account privilege  |
+| role3    | update        | null      | account privilege  |
+| role4    | truncate      | null      | account privilege  |
+| role5    | createtab     | null      | account privilege  |
+| role1    | delete        | table9    | relation privilege |
+| role2    | select        | table10   | relation privilege |
+| role3    | delete        | table1    | relation privilege |
+| role4    | update        | table5    | relation privilege |
+| role5    | revoke        | table5    | relation privilege |
++----------+---------------+-----------+--------------------+
+11 rows in set (0.00 sec)
+
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,r.rolename as rolename,r.privilegetype as privilegetype,r.tablename as tablename,r.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r), useraccount as x where x.rolename=r.rolename;
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename;
++------+-------+-----------+----------+---------------+-----------+--------------------+
+| idno | fname | lname     | rolename | privilegetype | tablename | privilegename      |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+|    1 | T     | YASHWANTH | role1    | select        | null      | account privilege  |
+|    6 | L     | ACCENT    | role1    | select        | null      | account privilege  |
+|   11 | H     | KATRE     | role1    | select        | null      | account privilege  |
+|   16 | H     | ASSAM     | role1    | select        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | update        | null      | account privilege  |
+|    6 | L     | ACCENT    | role1    | update        | null      | account privilege  |
+|   11 | H     | KATRE     | role1    | update        | null      | account privilege  |
+|   16 | H     | ASSAM     | role1    | update        | null      | account privilege  |
+|    2 | S     | ROSHAN    | role2    | delete        | null      | account privilege  |
+|    7 | Z     | CHEVI     | role2    | delete        | null      | account privilege  |
+|   12 | L     | LAVA      | role2    | delete        | null      | account privilege  |
+|   17 | T     | MAMA      | role2    | delete        | null      | account privilege  |
+|    3 | Q     | JACK      | role3    | update        | null      | account privilege  |
+|    8 | O     | PANEER    | role3    | update        | null      | account privilege  |
+|   13 | N     | KUMAR     | role3    | update        | null      | account privilege  |
+|   18 | K     | KEITH     | role3    | update        | null      | account privilege  |
+|    4 | R     | KAMAL     | role4    | truncate      | null      | account privilege  |
+|    9 | F     | YOUKI     | role4    | truncate      | null      | account privilege  |
+|   14 | R     | JAI       | role4    | truncate      | null      | account privilege  |
+|   19 | G     | RAMA      | role4    | truncate      | null      | account privilege  |
+|    5 | H     | SUMO      | role5    | createtab     | null      | account privilege  |
+|   10 | J     | HARDY     | role5    | createtab     | null      | account privilege  |
+|   15 | G     | MATRE     | role5    | createtab     | null      | account privilege  |
+|   20 | F     | BUSS      | role5    | createtab     | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | delete        | table9    | relation privilege |
+|    6 | L     | ACCENT    | role1    | delete        | table9    | relation privilege |
+|   11 | H     | KATRE     | role1    | delete        | table9    | relation privilege |
+|   16 | H     | ASSAM     | role1    | delete        | table9    | relation privilege |
+|    2 | S     | ROSHAN    | role2    | select        | table10   | relation privilege |
+|    7 | Z     | CHEVI     | role2    | select        | table10   | relation privilege |
+|   12 | L     | LAVA      | role2    | select        | table10   | relation privilege |
+|   17 | T     | MAMA      | role2    | select        | table10   | relation privilege |
+|    3 | Q     | JACK      | role3    | delete        | table1    | relation privilege |
+|    8 | O     | PANEER    | role3    | delete        | table1    | relation privilege |
+|   13 | N     | KUMAR     | role3    | delete        | table1    | relation privilege |
+|   18 | K     | KEITH     | role3    | delete        | table1    | relation privilege |
+|    4 | R     | KAMAL     | role4    | update        | table5    | relation privilege |
+|    9 | F     | YOUKI     | role4    | update        | table5    | relation privilege |
+|   14 | R     | JAI       | role4    | update        | table5    | relation privilege |
+|   19 | G     | RAMA      | role4    | update        | table5    | relation privilege |
+|    5 | H     | SUMO      | role5    | revoke        | table5    | relation privilege |
+|   10 | J     | HARDY     | role5    | revoke        | table5    | relation privilege |
+|   15 | G     | MATRE     | role5    | revoke        | table5    | relation privilege |
+|   20 | F     | BUSS      | role5    | revoke        | table5    | relation privilege |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+44 rows in set (0.01 sec)
+
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename and idno =1;
++------+-------+-----------+----------+---------------+-----------+--------------------+
+| idno | fname | lname     | rolename | privilegetype | tablename | privilegename      |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+|    1 | T     | YASHWANTH | role1    | select        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | update        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | delete        | table9    | relation privilege |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+3 rows in set (0.00 sec)
+
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename and idno =1 and privilegetype="drop";
+Empty set (0.02 sec)
+
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename and idno =1 and privilegetype="select";
++------+-------+-----------+----------+---------------+-----------+-------------------+
+| idno | fname | lname     | rolename | privilegetype | tablename | privilegename     |
++------+-------+-----------+----------+---------------+-----------+-------------------+
+|    1 | T     | YASHWANTH | role1    | select        | null      | account privilege |
++------+-------+-----------+----------+---------------+-----------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename and idno =1;
++------+-------+-----------+----------+---------------+-----------+--------------------+
+| idno | fname | lname     | rolename | privilegetype | tablename | privilegename      |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+|    1 | T     | YASHWANTH | role1    | update        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | select        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | delete        | table9    | relation privilege |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+3 rows in set (0.01 sec)
+
+mysql> create view test as (select x.idno as idno,x.fname as fname, x.lname as lname,y.rolename as rolename,y.privilegetype as privilegetype,y.tablename as tablename,y.privilegename as privilegename from(select * from (select a.rolename, a.a_privilegetype as privilegetype,"null" as tablename,p.priv_name as privilegename from accountprivileges as a, privileges as p where a.aid=p.pid union select r.rolename, r.r_privilegetype,r.tablename as tablename,t.priv_name as privilegename from relationprivileges as r, privileges as t where r.rid=t.pid) as r)as y, useraccount as x where x.rolename=y.rolename and idno =1);
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> select * from test;
++------+-------+-----------+----------+---------------+-----------+--------------------+
+| idno | fname | lname     | rolename | privilegetype | tablename | privilegename      |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+|    1 | T     | YASHWANTH | role1    | select        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | update        | null      | account privilege  |
+|    1 | T     | YASHWANTH | role1    | delete        | table9    | relation privilege |
++------+-------+-----------+----------+---------------+-----------+--------------------+
+3 rows in set (0.08 sec)
+
+mysql> delete from test where privilegetype="select";
+ERROR 1395 (HY000): Can not delete from join view 'final.test'

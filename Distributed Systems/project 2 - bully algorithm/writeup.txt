@@ -1,0 +1,41 @@
+Name: Naga Sri Rama Yashwanth Thota
+UTA ID: 1001507395
+Net ID: ynt7395
+Language: JAVA
+==============================================================================================
+Reference:
+https://github.com/sambenison66/Ring-Coordinator-Election-Algorithm-using-Java/blob/master/RingAlgorithm.java
+above reference gave basic idea of Thread and GUI interaction
+
+https://github.com/abhinavbansal246/Ring-Algorithm/blob/master/RingAlgo/src/GuiShell.java
+above Ref is for timer functionality.
+
+My lab1 code for gui and ServerSocket creation.
+==============================================================================================
+Contents of ZIP File:
+1. Election.java
+2. writeup.txt
+==============================================================================================
+How Code is Structured:
+
+Election class containd main GUI and main function
+Main calls handler thread object to run.
+Coordinator once elected sends alive essages to all other processes and they acknowledge.
+
+Simple GUI with 2 buttons and a text area.
+Each process starts seperately,each process starts the bully election on startup.
+UI has 2 buttons. 
+Stop/drop button to stop the process.
+Restart button to put process again in ring.
+
+============================================================================================
+How to Run the code:
+javac Election.java
+
+java Election
+Run this command 5 seperate times to create 5 process.
+Code is designed to work with 5 process. It works as desired only when 5 process exist.
+Max Process count can be changed in code.
+
+
+============================================================================================
