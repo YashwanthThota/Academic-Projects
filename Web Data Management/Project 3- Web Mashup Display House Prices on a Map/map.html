@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--Name: Naga Sri Rama Yashwanth Thota
+StudentID: 1001507395-->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display House Prices on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUFfqmNI9wUI23veY2SERbL5PHsWfDebw&callback=myMap"></script>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>House address: <input type="text" id="address" style="width:300px;"/></label>
+       <input id="submit" type="button" onclick="sendRequest();" value="Find"/>
+       <input id="clear" type="button" onclick="fire();" value="clear"/>
+    </form>
+    <div id="googleMap" style="width: 600px; height: 500px;"></div></br>
+    <div id="output">&nbsp;</div>
+    <div id="historylog"></div>
+  </body>
+</html>
