@@ -1,17 +1,17 @@
-# A Music Application By using HTML, Javascript, Ajax
+# Pong javascript game using HTML and Javascript
 
 **DESCRIPTION:** 
-  - This is a javascript application to get information about music artists, their albums.
-  - The user will type the artist name and it displays the information regarding the artist. 
-  
+  - There are pong court, pong ball, paddle in the game  
+  - When the Start button is clicked or left-click on the court, the ball will start from a random place at the left border of the court at a random angle between -π/4 and π/4
+  - The paddle can move up and down on the right border by just moving the mouse (without clicking the mouse)
+  - The ball bounces on the left, top, and bottom borders of the court. Everytime you hit the ball with the paddle, you add one strike.
+  - If the ball crosses the right border (the dotted line), the game is suspended and the strikes so far becomes your score.
+  - The goal of this game is to move the paddle to protect the right border by hitting the ball.
 **FEATURES:**
-  - the artist information like the artist name, Information about the artist (biography), their picture, a list of their top albums (titles & pictures), and a list of names of similar artists is displayed
+  - You would need to click on the Start button or click on the court to restart with a zero number of strikes
+  - there will be three speeds fast, medium , slow
+  - this application will keep count of the highest strikes.
 
-**TECHNICAL FEATURES:**
-   - This application is developed using plain **Javascript, Ajax**. No javascript libraries are used.
-   - Used Last.fm **RestAPI** services for getting information.
-   - The **Ajax** request will return **JSON** format data.
-   - This application loads data asynchronously, so the web page should never be redrawn/refreshed completely.
 
 **DEMO LINK(HOSTED IN HEROKU):**
- (https://evening-inlet-59366.herokuapp.com/)
+ (https://hidden-lowlands-96263.herokuapp.com/)
